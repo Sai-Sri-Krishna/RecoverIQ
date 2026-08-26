@@ -1,0 +1,6 @@
+{
+  "name": "RecoverIQ",
+  "description": "AI Revenue Recovery Agent for merchants with Razorpay Test Mode integration, deterministic policy safeguards, and Gemini-powered failure diagnostics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
