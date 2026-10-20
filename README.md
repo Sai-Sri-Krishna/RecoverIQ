@@ -83,6 +83,36 @@ RecoverIQ is an agentic AI revenue recovery loop that runs end-to-end — from f
 
 ---
 
+## Screenshots
+
+### Revenue Recovery Dashboard
+
+The overview dashboard summarizes revenue at risk, recoverable revenue, recovered revenue, pending approvals, recovery trends, and AI recovery health.
+
+![RecoverIQ revenue recovery dashboard](docs/images/dashboard.png)
+
+### Recovery Queue
+
+The Recovery Queue allows merchants to review failed transactions, inspect payment failure reasons, view AI recovery scores, and approve recommended recovery strategies.
+
+![RecoverIQ recovery queue](docs/images/recovery-queue.jpg)
+
+### AI Diagnosis and Recovery Strategy
+
+RecoverIQ analyzes payment failures using Gemini AI, evaluates transaction telemetry, identifies likely root causes, and recommends a bounded recovery action.
+
+![RecoverIQ AI diagnosis](docs/images/ai-diagnosis.jpg)
+
+### Human-in-the-Loop Merchant Authorization
+
+Before a recovery action is dispatched, the merchant reviews the AI recommendation, retry limits, stopping conditions, and policy requirements.
+
+![RecoverIQ merchant approval](docs/images/merchant-approval.jpg)
+
+> The screenshots use simulated Razorpay Test Mode data. Personal-looking customer information has been blurred for public portfolio use.
+
+---
+
 ## Tech Stack
 
 | Layer | Technology |
@@ -208,6 +238,7 @@ Copy `.env.example` to `.env` and configure:
 RecoverIQ ships with a **synthetic dataset generator** that creates 125 realistic failed payment transactions across 7 failure categories (bank downtime, 3DS authentication failure, insufficient funds, expired card, network timeout, fraud risk flag, and mandate issues) and 4 customer tiers (VIP, Enterprise, Growth, Starter).
 
 All Razorpay interactions use **Test Mode** exclusively:
+
 - Payment links are created against the `rzp_test_` API
 - No real money is charged at any point
 - Settlement is simulated via the `/api/transactions/:id/simulate-payment` endpoint
