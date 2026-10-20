@@ -187,8 +187,8 @@ Express Server (server.ts · port 3000)
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-org/recoveriq
-cd recoveriq
+git clone https://github.com/Sai-Sri-Krishna/RecoverIQ.git
+cd RecoverIQ
 
 # 2. Install dependencies
 npm install
